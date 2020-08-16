@@ -1,6 +1,3 @@
-Hello by Alessio:
-This is a new commit
-
 bluemix-hello-node
 ================================================================================
 
