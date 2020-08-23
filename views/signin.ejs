@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <%- include('partials/head',title) %>
+</head>
+
+<body>
+
+  <main class="login-page">
+    <div class="container z-depth-3">
+      <h5>Sign In</h5>
+      <form id="frm-signin" action="/Login" method="POST">
+        <div class="row center">
+          <div class="input-field col s12">
+            <input id="username" type="text" class="validate" name="Username" required value=<%= username %>>
+            <label for="username">Username</label>
+          </div>
+        </div>
+        <div class="row center">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" name="Password" required value=<%= password %>>
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row center">
+          <button id="btn-signin" class="waves-effect waves-light btn center app-button" type="submit">Sign In</button>
+          <a href="/" class="waves-effect waves-light btn center app-button">Cancel</a>
+        </div>
+        <div class="row app-links">
+          <a href="/Registration" class="right">Not a member yet?</a>
+        </div>
+        <div class="error"><%= message %></div>
+    </form>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <%- include ("partials/footer_bottom") %>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="env.js"></script>
+</body>
+
+</html>

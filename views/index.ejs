@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <%- include("partials/head",title) %>
+</head>
+<body>
+  <header>
+    <%- include ("partials/header",user) %>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="row">        
+        <img class="responsive-img" src="assets/images/banner.jpg">
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <%- include ("partials/footer_bottom") %>
+  </footer>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="env.js"></script>
+</body>
+
+</html>

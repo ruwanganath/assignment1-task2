@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <%- include('partials/head',title) %>
+</head>
+
+<body>
+
+  <main class="already-signedin-page">
+    <div class="container z-depth-3">
+      <h5>Signedin Status</h5>
+        <h6>You are already signed in. Please sign off first to sign back in.</h5>
+        <div class="row center">
+          <a id="btn-already-signedin" href="/Logoff" class="waves-effect waves-light  app-button">Sign Off Now</a>
+        </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <%- include ("partials/footer_bottom") %>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="env.js"></script>
+</body>
+
+</html>

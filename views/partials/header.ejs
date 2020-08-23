@@ -1,0 +1,60 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/Bids">Bids</a></li>
+    <li><a href="/Selling">Selling</a></li>
+    <li><a href="/Purchasing">Purchasing</a></li>
+  </ul>
+  <%  if(user===null) { %>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="/Signin">Sign In</a></li>
+    <li><a href="/Registration">Register</a></li>
+  </ul>
+  <% } else {%>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="/Logoff">Sign Off</a></li>
+  </ul>
+  <% } %>
+  <nav id="top-navbar" class="nav-extended">
+    <div class="nav-wrapper">      
+      <a href="/" class="brand-logo"><img src="assets/images/ebay.png" /></a>      
+      <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i id="ic-menu"
+          class="material-icons">menu</i></a>  
+          <div id="welcome-user" class="right"><%= user %></div> 
+          <input id="input-welcome-user" name="Usename" type="hidden" value=<%= userName %>>   
+      <ul id="nav-mobile" class="right hide-on-med-and-down">        
+        <li><a href="/">Home</a></li>
+        <li><a href="/Sell">Sell</a></li>
+        <li><a href="/Buy">Buy</a></li>
+        <li><a class="dropdown-trigger" href="/" data-target="dropdown2">
+          <i id="ic-account" class="material-icons">account_circle</i></a></li>
+      </ul>    
+       
+    </div>
+    
+  </nav>
+
+  <ul id="mobile-demo" class="sidenav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/Sell">Sell</a></li>
+    <li><a href="/Buy">Buy</a></li>
+     <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a id="sidenav-ic-acc-header" class="collapsible-header"><img id="img-acc"
+              src="assets/images/profile.PNG" /></a>
+          <div id="sidenav-ic-acc-body" class="collapsible-body">
+            <%  if(user===null) { %>
+            <ul>
+              <li><a href="/Signin">Sign In</a></li>
+              <li><a href="/Registration">Register</a></li>
+            </ul>
+            <% } else {%>
+              <ul>
+                <li><a href="/Logoff">Sign Off</a></li>
+              </ul>
+            <% } %>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>

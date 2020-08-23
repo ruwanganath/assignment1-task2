@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <%- include("partials/head",title) %>
+</head>
+
+<body>
+    <header>
+        <%- include ("partials/header",user) %>
+    </header>
+
+    <main class="individual-item-page">
+        <div class="container">
+            <h5>Item Info</h5>
+            <div class="row">
+                <div class="col l2 s12"><img src="assets/images/products/<%= result.image %>" alt="" /></div>
+                <div class="col l4 s12">
+                    <div id="product-name"><%= result.name %></div>
+                    <div id="product-description"><%= result.description %></div>
+                    <div id="product-price">$&nbsp;<%= result.price %></div>
+                    <div id="product-seller-name"><%= result.seller %></div>
+                    <div id="time-left">Bidding has not started yet</div>
+                    <div id="last-bidding">0 Bids</div>
+                </div>
+                <div class="col l3 s12" >
+                    <form id="frm-bid" action="/Item" method="POST">
+                        <div class="input-field">
+                            <input id="biding-price" type="text" class="validate">
+                            <label for="biding-price">Enter Bidding Price</label>                            
+                            <button id="btn-bidding" class="waves-effect waves-light btn app-button" type="button">Bid
+                                Now</button>
+                        </div>
+                        <div id="error-bidding" class="error"></div>
+                    </form>
+                </div>
+                <div class="col l3 s12" >
+                    <div id="biding-status">                        
+                    </div>
+                    <div id="total"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <%- include ("partials/footer_bottom") %>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="env.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <%- include("partials/head",title) %>
+</head>
+
+<body>
+  <header>
+    <%- include ("partials/header",user) %>
+  </header>
+
+  <main class="list-item-page">
+    <div class="container">
+      <h5>List Your Item Here</h5>
+      <form id="frm-list-product" action="ListItem" method="POST" enctype="multipart/form-data">
+        <div class="row">  
+          <div class="col l4 s12">
+            <img id="img-image-upload" class="responsive-img" src="assets/images/default.jpg">  
+            <input id="input-image-upload" class="left" type="file" name="File" accept="image/*" onchange="changeImage(this)"/> 
+          </div>
+          <div class="col l8 s12">          
+            <div class="input-field">
+              <input id="name" type="text" class="validate" name="Product_name" required value=<%= product_name %> >
+              <label for="name">Product Name</label>
+            </div>
+            <div class="input-field">
+              <input id="description" type="text" class="validate" name="Product_description" required value=<%= product_description %> >
+              <label for="description">Product Description</label>
+            </div>
+            <div class="input-field">
+              <input id="bidding-start-price" type="text" class="validate" name="Product_price" required value=<%= product_price %>  >
+              <label for="bidding-start-price">Bidding Start Price</label>
+            </div>
+            
+            <input id="input-list-item" class="waves-effect waves-light right" type="submit" value="List Item" />
+            <div class="error"><%= message %></div>          
+          </div>                
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <%- include ("partials/footer_bottom") %>
+  </footer>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="env.js"></script>
+</body>
+
+</html>
