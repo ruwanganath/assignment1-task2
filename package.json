@@ -11,7 +11,7 @@
     "http-proxy": "^1.18.1",
     "materialize-css": "^1.0.0",
     "mongodb": "^3.6.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "main": "server.js",
   "scripts": {
